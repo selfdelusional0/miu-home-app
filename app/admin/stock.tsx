@@ -3,6 +3,7 @@ import {View, Text, ScrollView, TouchableOpacity, Alert, Image} from "react-nati
 import { useRouter } from "expo-router";
 import {account, databases} from "@/lib/appwrite";
 import icons from "@/constants/icons";
+import {formatPrice} from "@/utils/format";
 
 const DB_ID = "684f9da6001c19c3c9a0";
 const FURNITURE_COLLECTION_ID = "684fab79000bd3a89fbc"; // Replace with your real collection ID
@@ -148,7 +149,7 @@ export default function Inventory() {
                             <Text className="text-sm text-gray-600">Quantity: {item.quantity}</Text>
                             <Text className="text-sm text-gray-600">Category: {item.category}</Text>
                             <Text className="text-sm text-gray-800 font-medium">
-                                Price: RM {item.price}
+                                Price: RM {formatPrice(item.price)}
                             </Text>
 
                             <View className="flex-row mt-3">

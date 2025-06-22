@@ -3,6 +3,7 @@ import { Alert, View, Text, ScrollView, TouchableOpacity, Image } from "react-na
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
 import { account } from "@/lib/appwrite";
+import {formatPrice} from "@/utils/format";
 
 export default function CartPage() {
     const [cartItems, setCartItems] = useState([]);
@@ -49,7 +50,7 @@ export default function CartPage() {
                                 <View className="flex-1">
                                     <Text className="text-lg font-bold">{item.name}</Text>
                                     <Text className="text-sm text-gray-600">{item.category}</Text>
-                                    <Text className="text-[#5d8076] font-semibold">RM {item.price}</Text>
+                                    <Text className="text-[#5d8076] font-semibold">RM {formatPrice(item.price)}</Text>
                                 </View>
                                 <TouchableOpacity onPress={() => removeFromCart(item.$id)}>
                                     <Text className="text-red-500">Remove</Text>
@@ -62,15 +63,15 @@ export default function CartPage() {
                     <View className="border-t border-gray-300 pt-4 mt-4">
                         <View className="flex-row justify-between mb-2">
                             <Text className="text-gray-700">Subtotal</Text>
-                            <Text className="text-gray-700">RM {subtotal.toFixed(2)}</Text>
+                            <Text className="text-gray-700">RM {formatPrice(subtotal)}</Text>
                         </View>
                         <View className="flex-row justify-between mb-2">
                             <Text className="text-gray-700">Delivery</Text>
-                            <Text className="text-gray-700">RM {DELIVERY_FEE.toFixed(2)}</Text>
+                            <Text className="text-gray-700">RM {formatPrice(DELIVERY_FEE)}</Text>
                         </View>
                         <View className="flex-row justify-between mb-4">
                             <Text className="text-lg font-bold text-[#5d8076]">Total</Text>
-                            <Text className="text-lg font-bold text-[#5d8076]">RM {total.toFixed(2)}</Text>
+                            <Text className="text-lg font-bold text-[#5d8076]">RM {formatPrice(total)}</Text>
                         </View>
                     </View>
 

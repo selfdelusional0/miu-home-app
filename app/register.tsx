@@ -1,7 +1,8 @@
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
+import {View, Text, TextInput, TouchableOpacity, Alert, Image} from "react-native";
 import React, { useState } from "react";
 import { useRouter } from "expo-router";
 import { account, databases, ID } from "@/lib/appwrite";
+import icons from "@/constants/icons";
 
 const DB_ID = "684f9da6001c19c3c9a0";
 const PROFILES_COLLECTION_ID = "684fa618002722712650";
@@ -55,7 +56,10 @@ export default function Register() {
 
     return (
         <View className="flex-1 bg-white justify-center px-6">
-            <Text className="text-2xl text-center mb-8">Create your Miu Home account</Text>
+            <View className="items-center mb-6">
+                <Image source={icons.logo} className="w-48 h-48" resizeMode="contain" />
+                <Text className="text-2xl text-center mb-8">Welcome back to Miu Home</Text>
+            </View>
 
             <TextInput
                 placeholder="Full Name"

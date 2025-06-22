@@ -12,6 +12,7 @@ import React, { useEffect, useState } from "react";
 import { databases, account } from "@/lib/appwrite";
 import icons from "@/constants/icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import {formatPrice} from "@/utils/format";
 
 const DB_ID = "684f9da6001c19c3c9a0";
 const FURNITURE_COLLECTION_ID = "684fab79000bd3a89fbc";
@@ -135,7 +136,7 @@ export default function ProductDetails() {
                 <Text className="text-3xl font-bold mb-1">{product.name}</Text>
                 <Text className="text-gray-500 text-xl mb-2">{product.category}</Text>
                 <Text className="text-gray-500 text-xl mb-2">Quantity: {product.quantity}</Text>
-                <Text className="text-2xl font-semibold text-[#5d8076] mb-4">RM {product.price}</Text>
+                <Text className="text-2xl font-semibold text-[#5d8076] mb-4">RM {formatPrice(product.price)}</Text>
 
                 <Text className="text-xl text-gray-800">{product.description}</Text>
 

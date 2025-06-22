@@ -19,6 +19,7 @@ export default function RootLayout() {
                     <Stack.Screen name="admin/add" options={{ title: "Miu Admin" }} />
                     <Stack.Screen name="admin/stock" options={{ title: "Miu Admin" }} />
                     <Stack.Screen name="admin/order" options={{ title: "Miu Admin" }} />
+                    <Stack.Screen name="admin/edit/[id]" options={{ title: "Miu Admin" }} />
                 </Stack>
             </CartProvider>
         </AuthProvider>

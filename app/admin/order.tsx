@@ -11,6 +11,7 @@ import {
 import {Query, databases, account} from "@/lib/appwrite";
 import icons from "@/constants/icons";
 import { useRouter } from "expo-router";
+import {formatPrice} from "@/utils/format";
 
 const DB_ID = "684f9da6001c19c3c9a0";
 const ORDERS_COLLECTION_ID = "6855139600230701b5fc";
@@ -167,7 +168,7 @@ export default function AdminOrders() {
                                     <View className="flex-1">
                                         <Text className="text-lg font-bold">{order.product.name}</Text>
                                         <Text className="text-sm text-gray-600">{order.product.category}</Text>
-                                        <Text className="text-[#5d8076] font-semibold">RM {order.product.price}</Text>
+                                        <Text className="text-[#5d8076] font-semibold">RM {formatPrice(order.product.price)}</Text>
 
                                         <Text className="text-xs mt-1 text-gray-500">
                                             Status:

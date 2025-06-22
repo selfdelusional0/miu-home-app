@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
+import {formatPrice} from "@/utils/format";
 
 export default function FavoritesPage() {
     const [favorites, setFavorites] = useState([]);
@@ -50,7 +51,7 @@ export default function FavoritesPage() {
                             <View className="flex-1">
                                 <Text className="text-lg font-bold">{item.name}</Text>
                                 <Text className="text-sm text-gray-600">{item.category}</Text>
-                                <Text className="text-[#5d8076] font-semibold">RM {item.price}</Text>
+                                <Text className="text-[#5d8076] font-semibold">RM {formatPrice(item.price)}</Text>
                             </View>
                             <TouchableOpacity onPress={() => removeFavorite(item.$id)}>
                                 <Text className="text-red-500">Remove</Text>
