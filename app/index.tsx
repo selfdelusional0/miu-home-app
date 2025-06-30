@@ -32,6 +32,7 @@ export default function Index() {
 
                 setIsLoggedIn(true);
             } catch (err) {
+                router.replace('/landing');
                 setIsLoggedIn(false);
                 console.log(err);
             }

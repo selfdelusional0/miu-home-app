@@ -4,6 +4,7 @@ const icons = {
     menu: require("@/assets/icons/menu.png"),
     close: require("@/assets/icons/close.png"),
     logo: require("@/assets/icons/logo.png"),
+    landing: require("@/assets/icons/landing.jpg"),
 };
 
 export default icons;

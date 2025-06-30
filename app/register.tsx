@@ -57,7 +57,6 @@ export default function Register() {
     return (
         <View className="flex-1 bg-white justify-center px-6">
             <View className="items-center mb-6">
-                <Image source={icons.logo} className="w-48 h-48" resizeMode="contain" />
                 <Text className="text-2xl text-center mb-8">Welcome back to Miu Home</Text>
             </View>
 
