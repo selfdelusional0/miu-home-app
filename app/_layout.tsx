@@ -11,6 +11,7 @@ export default function RootLayout() {
                     <Stack.Screen name="index" options={{ title: "Miu Home" }} />
                     <Stack.Screen name="login" options={{ title: "Miu Home" }} />
                     <Stack.Screen name="order" options={{ title: "Miu Home" }} />
+                    <Stack.Screen name="landing" options={{ title: "Miu Home" }} />
                     <Stack.Screen name="favourite" options={{ title: "Miu Home" }} />
                     <Stack.Screen name="register" options={{ title: "Miu Home" }} />
                     <Stack.Screen name="product/[id]" options={{ title: "Miu Home" }} />
