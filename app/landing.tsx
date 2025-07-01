@@ -30,19 +30,19 @@ export default function Landing() {
 
     return (
         <ImageBackground
-            source={ icons.landing }
+            source={icons.landing}
             resizeMode="cover"
             className="flex-1"
         >
-            <View className="flex-1 justify-center items-start px-6 mt-48">
+            <View className="flex-1 justify-center items-start ml-4 px-6 mt-48">
                 <Text className="text-white text-2xl font-semibold mb-3">Miu Home</Text>
-                <TouchableOpacity
-                    onPress={() => router.replace("/login")}
-                    className="bg-white px-6 py-3 rounded-full"
-                >
-                    <Text className="text-[#5d8076] font-semibold text-base">Get Started</Text>
+                <TouchableOpacity onPress={() => router.replace("/login")}>
+                    <View className="border-b border-white pb-[1px]">
+                        <Text className="text-white font-medium text-base">Get Started</Text>
+                    </View>
                 </TouchableOpacity>
             </View>
         </ImageBackground>
     );
+
 }
