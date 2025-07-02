@@ -47,7 +47,7 @@ export default function EditProduct() {
     }, [id]);
 
     const handleUpdate = async () => {
-        if (!name || !quantity || !category || !pricenpx ) {
+        if (!name || !quantity || !category || !price ) {
             Alert.alert("Missing Info", "Please fill in all fields.");
             return;
         }
